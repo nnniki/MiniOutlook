@@ -8,6 +8,13 @@ I represent the specifications with the following MailClient Interface:
 
 package bg.sofia.uni.fmi.mjt.mail;
 
+import bg.sofia.uni.fmi.mjt.mail.exceptions.AccountAlreadyExistsException;
+import bg.sofia.uni.fmi.mjt.mail.exceptions.AccountNotFoundException;
+import bg.sofia.uni.fmi.mjt.mail.exceptions.RuleAlreadyDefinedException;
+import bg.sofia.uni.fmi.mjt.mail.exceptions.FolderAlreadyExistsException;
+import bg.sofia.uni.fmi.mjt.mail.exceptions.FolderNotFoundException;
+import bg.sofia.uni.fmi.mjt.mail.exceptions.InvalidPathException;
+
 import java.util.Collection;
 
 public interface MailClient {
