@@ -1,21 +1,13 @@
-# MiniOutlook
+### MiniOutlook :mailbox_closed:
 
 This is a project made by me for Modern Java Technologies course in Faculty Of Matematics and Informatics at Sofia University St. Kliment Ohridski
 
-In this project i am creating a mini version of Microsoft Outlook in which i represent the main functionalities.
+In this project i am creating a mini version of Microsoft Outlook.
 
-I represent the specifications with the following MailClient Interface:
+I represent the main functionalities with the following MailClient Interface:
 
+```java
 package bg.sofia.uni.fmi.mjt.mail;
-
-import bg.sofia.uni.fmi.mjt.mail.exceptions.AccountAlreadyExistsException;
-import bg.sofia.uni.fmi.mjt.mail.exceptions.AccountNotFoundException;
-import bg.sofia.uni.fmi.mjt.mail.exceptions.RuleAlreadyDefinedException;
-import bg.sofia.uni.fmi.mjt.mail.exceptions.FolderAlreadyExistsException;
-import bg.sofia.uni.fmi.mjt.mail.exceptions.FolderNotFoundException;
-import bg.sofia.uni.fmi.mjt.mail.exceptions.InvalidPathException;
-
-import java.util.Collection;
 
 public interface MailClient {
 
@@ -122,5 +114,5 @@ public interface MailClient {
      * @throws IllegalArgumentException if any of the parameters is null, empty or blank
      */
     void sendMail(String accountName, String mailMetadata, String mailContent);
-
 }
+```
