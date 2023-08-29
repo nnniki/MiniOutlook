@@ -17,11 +17,6 @@ import java.util.TreeSet;
 
 public class Outlook implements MailClient {
 
-    private Set<Account> allAccounts;
-    private Map<String, Inbox> receivedMails;
-    private Map<String, List<Mail>> sentMails;
-    private Map<String, Set<Rule>> rules;
-
     private static final int MAX_PRIORITY = 1;
     private static final int MIN_PRIORITY = 10;
     private static final String MAIL_METADATA_REGEX = "[:\\r?\\n|\\r]+";
@@ -35,6 +30,10 @@ public class Outlook implements MailClient {
     private static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm";
     private static final String DEFAULT_FOLDER = "/inbox";
     private static final String SENT_FOLDER = "/sent";
+    private final Set<Account> allAccounts;
+    private final Map<String, Inbox> receivedMails;
+    private final Map<String, List<Mail>> sentMails;
+    private final Map<String, Set<Rule>> rules;
 
     public Outlook() {
         allAccounts = new HashSet<>();
